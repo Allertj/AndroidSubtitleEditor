@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout-land/fragment_advanced.xml" value="0.12" />
+        <entry key="app/src/main/res/layout-land/fragment_edit_single.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/fragment_load_file.xml" value="0.16" />
+        <entry key="app/src/main/res/layout-land/fragment_main_menu.xml" value="0.5" />
+        <entry key="app/src/main/res/layout-land/fragment_save_subtitle.xml" value="0.14" />
+        <entry key="app/src/main/res/layout-land/fragment_select_video.xml" value="0.5285451197053407" />
+        <entry key="app/src/main/res/layout-land/fragment_sync_by_frame_rate.xml" value="0.3153153153153153" />
+        <entry key="app/src/main/res/layout-land/fragment_sync_with_other_sub.xml" value="0.2921875" />
+        <entry key="app/src/main/res/layout-land/frame_rate_dialog.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_full_screen_holder.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_picture_player.xml" value="0.1703125" />
+        <entry key="app/src/main/res/layout/charset_dialog.xml" value="0.15625" />
+        <entry key="app/src/main/res/layout/exoplayer_custom.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_advanced.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit_single.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/fragment_load_file.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_main_menu.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_new_player.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_picture_player.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_s_m_b_explorer.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_save_subtitle.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_select_video.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_shift_stretch.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_sync_by_frame_rate.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_sync_with_other_sub.xml" value="0.1703125" />
+        <entry key="app/src/main/res/layout/fragment_view_subtitle.xml" value="0.13835616438356163" />
+        <entry key="app/src/main/res/layout/frame_rate_dialog.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/markup_dialog.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/saving_bar.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/text_row_item.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/text_row_line.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.35025641025641024" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/new_icon.xml" value="0.67" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/new_icon_round.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

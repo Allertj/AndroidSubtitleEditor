@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="bottom"
+    android:layoutDirection="ltr"
+    android:id="@+id/rest_exo_buttons"
+    tools:targetApi="28">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <ImageButton android:id="@+id/exo_audio_track"
+            style="@style/ExoStyledControls.Button.Bottom.AudioTrack"
+            android:visibility="gone"
+            android:contentDescription="@string/switchAudioTrack" />
+        <ImageButton android:id="@+id/exo_prev"
+            style="@style/ExoMediaButton.Previous"
+            android:contentDescription="@string/previous" />
+        <ImageButton android:id="@+id/exo_rew"
+            style="@style/ExoMediaButton.Rewind"
+            android:contentDescription="@string/rewind" />
+        <ImageButton android:id="@+id/exo_play"
+            style="@style/ExoMediaButton.Play"
+            android:contentDescription="@string/play" />
+        <ImageButton android:id="@+id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
+            android:contentDescription="@string/pause" />
+        <ImageButton android:id="@+id/exo_ffwd"
+            style="@style/ExoMediaButton.FastForward"
+            android:contentDescription="@string/fastForward" />
+        <ImageButton android:id="@+id/exo_next"
+            style="@style/ExoMediaButton.Next"
+            android:contentDescription="@string/next" />
+        <ImageButton android:id="@+id/exo_changezoom"
+            style="@style/ExoStyledControls.Button.Bottom.VR"
+            android:visibility="gone"
+            android:contentDescription="@string/changeZoom" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"/>
+        <View
+            android:id="@+id/exo_progress_placeholder"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="26dp"/>
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"/>
+        <FrameLayout
+            android:id="@+id/exo_fullscreen_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end">
+            <ImageView
+                android:id="@+id/exoplayer_fullscreen_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/exo_ic_fullscreen_enter"
+                android:focusable="true"
+                android:contentDescription="@string/toggle_fullscreen" />
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonFieldVertical"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/setAsStartingPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+
+            style="?android:attr/buttonStyle"
+            android:text="@string/set_time_as_start"
+            app:layout_constraintBottom_toBottomOf="@+id/jumpToTheStartPlayer"
+            app:layout_constraintEnd_toStartOf="@+id/jumpToTheStartPlayer" />
+
+
+        <TextView
+            android:id="@+id/jumpToTheStartPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:elevation="10dp"
+            android:text="@string/jump_to_start_time"
+
+            style="?android:attr/buttonStyle"
+            app:layout_constraintBottom_toBottomOf="@id/reloadButtonPlayer"
+            app:layout_constraintEnd_toStartOf="@+id/reloadButtonPlayer" />
+
+        <TextView
+            android:id="@+id/reloadButtonPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reload_subtitle"
+            android:elevation="5dp"
+
+            style="?android:attr/buttonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jumpToTheEndPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/jump_to_end_time"
+
+            style="?android:attr/buttonStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/reloadButtonPlayer"
+            app:layout_constraintStart_toEndOf="@+id/reloadButtonPlayer" />
+
+        <TextView
+            android:id="@+id/setAsEndingPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/set_time_as_end2"
+
+            style="?android:attr/buttonStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/jumpToTheEndPlayer"
+            app:layout_constraintStart_toEndOf="@+id/jumpToTheEndPlayer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

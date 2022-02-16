@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AndroidSubtitleEditor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange_for_night</item>
+        <item name="colorPrimaryVariant">@color/dark_grey</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="buttonStyle">@style/EditStyleDark</item>
+        <item name="android:buttonStyle">@style/regularButtonStyleDark</item>
+        <item name="colorSecondary">@color/dark_grey</item>
+        <item name="colorPrimaryDark">@color/white</item>
+<!--        <item name="editTextStyle">@style/EditStyleDark</item>-->
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorAccent">@color/orange_for_night</item>
+        <item name="android:colorBackground">@color/black</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+
+</resources>

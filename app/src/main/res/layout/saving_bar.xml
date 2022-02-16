@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/saving_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:minHeight="?attr/actionBarSize"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <TextView
+        android:id="@+id/save_smb_button_toolbar"
+        android:layout_width="wrap_content"
+        android:minWidth="80dp"
+        style="?android:attr/buttonStyle"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/save" />
+
+    <EditText
+        android:id="@+id/save_filename_edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="?attr/colorPrimaryDark"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="        "
+        android:hint="@string/filename"
+        android:inputType="text" />
+
+</android.widget.Toolbar>

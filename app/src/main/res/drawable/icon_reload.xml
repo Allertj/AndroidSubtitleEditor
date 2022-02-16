@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+    <item
+        android:drawable="@drawable/ic_baseline_restart_alt_24"
+        android:gravity="center_horizontal|center_vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:left="0dp"
+        android:bottom="0dp"
+        android:top="0dp"
+        android:right="0dp" />
+</layer-list>

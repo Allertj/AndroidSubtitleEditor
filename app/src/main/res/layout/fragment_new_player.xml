@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:id="@+id/player_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@color/black"
+        android:layout_width="fill_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoplayer_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:controller_layout_id="@layout/exoplayer_custom"
+        app:resize_mode="fixed_width" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground">
+
+        <TextView
+            android:id="@+id/last_selected_sub"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            style="?attr/buttonStyle"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/first_selected_sub"
+            app:layout_constraintHeight_max="80dp"
+            app:layout_constraintStart_toStartOf="@+id/first_selected_sub"
+            app:layout_constraintTop_toBottomOf="@+id/first_selected_sub" />
+
+        <TextView
+            android:id="@+id/jump_to_start"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_start"
+            app:layout_constraintEnd_toStartOf="@+id/reload_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reload_button" />
+
+        <TextView
+            android:id="@+id/jump_to_end"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/reload_button"
+            app:layout_constraintTop_toTopOf="@+id/reload_button" />
+
+        <TextView
+            android:id="@+id/pause"
+            style="?android:attr/buttonStyle"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="@string/pause_symbol"
+            app:layout_constraintBottom_toTopOf="@+id/switch_audio"
+            app:layout_constraintEnd_toStartOf="@+id/forward100millisecond"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/back100millisecond"
+            app:layout_constraintTop_toBottomOf="@+id/reload_button" />
+
+        <TextView
+            android:id="@+id/back100millisecond"
+            style="?android:attr/buttonStyle"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="@string/_0_1s_left"
+            app:layout_constraintEnd_toStartOf="@+id/pause"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/back1second"
+            app:layout_constraintTop_toTopOf="@+id/pause" />
+
+        <TextView
+            android:id="@+id/forward100millisecond"
+            style="?android:attr/buttonStyle"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/_0_1s"
+            app:layout_constraintEnd_toStartOf="@+id/forward1second"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pause"
+            app:layout_constraintTop_toTopOf="@+id/pause" />
+
+        <ScrollView
+            android:id="@+id/scroll_result"
+            android:layout_width="277dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/first_selected_sub"
+            app:layout_constraintStart_toStartOf="@+id/first_selected_sub"
+            app:layout_constraintTop_toBottomOf="@+id/first_selected_sub">
+            <TextView
+                android:id="@+id/last_selected_sub1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/error"
+                android:visibility="gone" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/back1second"
+            style="?android:attr/buttonStyle"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+
+            android:maxLines="1"
+            android:text="@string/_1s_left"
+            app:layout_constraintEnd_toStartOf="@+id/back100millisecond"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pause" />
+
+        <TextView
+            android:id="@+id/forward1second"
+            style="?android:attr/buttonStyle"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+
+            android:maxLines="1"
+            android:text="@string/_1s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/forward100millisecond"
+            app:layout_constraintTop_toTopOf="@+id/pause" />
+
+        <TextView
+            android:id="@+id/switch_audio"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_audio"
+            app:layout_constraintBottom_toTopOf="@+id/first_selected_sub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pause" />
+
+        <TextView
+            android:id="@+id/reload_button"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reload_subtitle"
+            app:layout_constraintBottom_toTopOf="@+id/pause"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/set_time_as_start"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/set_time_as_start"
+            app:layout_constraintEnd_toStartOf="@+id/switch_audio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switch_audio" />
+
+        <TextView
+            android:id="@+id/set_time_as_end"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/set_time_as_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch_audio"
+            app:layout_constraintTop_toTopOf="@+id/switch_audio" />
+
+        <TextView
+            android:id="@+id/select_last_sub_player"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_other"
+            android:contentDescription="@string/choose_other_last_subtitle"
+            app:layout_constraintEnd_toEndOf="@+id/last_selected_sub"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/first_selected_sub"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            style="?attr/buttonStyle"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            app:layout_constraintWidth_max="400dp"
+            app:layout_constraintBottom_toTopOf="@+id/last_selected_sub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_max="80dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_audio" />
+
+        <TextView
+            android:id="@+id/select_first_sub_player"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_other"
+            android:contentDescription="@string/choose_other_first_subtitle"
+            app:layout_constraintEnd_toEndOf="@+id/first_selected_sub"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/current_first_subtitle"
+            app:layout_constraintBottom_toTopOf="@+id/first_selected_sub"
+            app:layout_constraintStart_toStartOf="@+id/first_selected_sub" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/current_last_subtitle"
+            app:layout_constraintBottom_toTopOf="@+id/last_selected_sub"
+            app:layout_constraintStart_toStartOf="@+id/last_selected_sub" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+

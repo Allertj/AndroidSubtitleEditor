@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_sync_with_other_sub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+
+        android:text="@string/current_last_subtitle"
+        app:layout_constraintBottom_toTopOf="@+id/last_sub_self"
+        app:layout_constraintStart_toStartOf="@+id/last_sub_self" />
+
+    <TextView
+        android:id="@+id/choose_last_other"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:contentDescription="@string/choose_other_last_subtitle"
+        android:text="@string/choose_other"
+        app:layout_constraintEnd_toEndOf="@+id/last_sub_other"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/choose_last_self"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="@string/choose_other"
+
+        app:layout_constraintEnd_toEndOf="@+id/last_sub_self"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/choose_first_other"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/choose_other_first_subtitle"
+        android:text="@string/choose_other"
+        app:layout_constraintEnd_toEndOf="@+id/first_sub_other"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/last_sub_self"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="13sp"
+        style="?attr/buttonStyle"
+        android:padding="10dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/first_sub_self"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="120dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/first_sub_self"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/first_sub_other"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="13sp"
+        style="?attr/buttonStyle"
+        android:padding="10dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/open_local_sub"
+        app:layout_constraintEnd_toEndOf="@+id/first_sub_self"
+        app:layout_constraintHeight_max="120dp"
+        app:layout_constraintStart_toStartOf="@+id/first_sub_self"
+        app:layout_constraintTop_toBottomOf="@+id/first_sub_self" />
+
+    <TextView
+        android:id="@+id/open_local_sub"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+
+
+        android:text="@string/open_local_subtitle"
+        app:layout_constraintBottom_toBottomOf="@+id/sync_subtitles"
+        app:layout_constraintEnd_toStartOf="@+id/sync_subtitles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sync_subtitles" />
+
+    <TextView
+        android:id="@+id/open_lan_subtitle"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="@string/open_lan_subtitle"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sync_subtitles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sync_subtitles"
+        app:layout_constraintTop_toTopOf="@+id/sync_subtitles" />
+
+    <TextView
+        android:id="@+id/first_sub_self"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"
+        style="?attr/buttonStyle"
+        android:maxWidth="20dp"
+        android:padding="10dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/first_sub_other"
+        app:layout_constraintEnd_toStartOf="@+id/last_sub_self"
+        app:layout_constraintHeight_max="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_max="430dp" />
+
+    <TextView
+        android:id="@+id/last_sub_other"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="13sp"
+        style="?attr/buttonStyle"
+        android:padding="10dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/first_sub_other"
+        app:layout_constraintEnd_toEndOf="@+id/last_sub_self"
+        app:layout_constraintHeight_max="120dp"
+        app:layout_constraintStart_toStartOf="@+id/last_sub_self"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/sync_subtitles"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <TextView
+        android:id="@+id/choose_first_self"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/choose_first_line_from_subtitle"
+
+        android:text="@string/choose_other"
+        app:layout_constraintEnd_toEndOf="@+id/first_sub_self"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:text="@string/current_first_subtitle"
+        app:layout_constraintBottom_toTopOf="@+id/first_sub_self"
+        app:layout_constraintStart_toStartOf="@+id/first_sub_self" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:text="@string/sync_this_subtitle_to"
+        app:layout_constraintBottom_toTopOf="@+id/first_sub_other"
+        app:layout_constraintStart_toStartOf="@+id/first_sub_other" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:text="@string/sync_this_subtitle_to"
+        app:layout_constraintBottom_toTopOf="@+id/last_sub_other"
+        app:layout_constraintStart_toStartOf="@+id/last_sub_other" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

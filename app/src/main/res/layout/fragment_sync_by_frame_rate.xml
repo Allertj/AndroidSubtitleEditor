@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <EditText
+        android:id="@+id/custom_after1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/_00"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/after_choice"
+        app:layout_constraintStart_toStartOf="@+id/after_choice"
+        app:layout_constraintTop_toBottomOf="@+id/after_choice"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonStyle"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="@+id/before_choice"
+        app:layout_constraintEnd_toStartOf="@+id/after_choice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/before_choice"
+        app:layout_constraintTop_toTopOf="@+id/before_choice" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/before_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView29"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/before23.975"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_23_975"
+            android:contentDescription="@string/current_frame_rate_is_23"
+            app:backgroundTint="?attr/colorSecondary"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <Button
+            android:id="@+id/before24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_24"
+            android:contentDescription="@string/current_frame_rate_is_24"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before23.975"
+            app:layout_constraintStart_toStartOf="@+id/before23.975"
+            app:layout_constraintTop_toBottomOf="@+id/before23.975" />
+
+        <Button
+            android:id="@+id/before25"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_25"
+            android:contentDescription="@string/current_frame_rate_is_25"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before24"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/before24"
+            app:layout_constraintTop_toBottomOf="@+id/before24" />
+
+        <Button
+            android:id="@+id/before29.975"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_29_975"
+            android:contentDescription="@string/current_frame_rate_is_29_975"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/before25"
+            app:layout_constraintTop_toBottomOf="@+id/before25" />
+
+        <Button
+            android:id="@+id/before30"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_30"
+            android:contentDescription="@string/current_frame_rate_is_30"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before29.975"
+            app:layout_constraintStart_toStartOf="@+id/before29.975"
+            app:layout_constraintTop_toBottomOf="@+id/before29.975" />
+
+        <Button
+            android:id="@+id/custom_before"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/activate_custom_before_frame_rate"
+            app:backgroundTint="?attr/colorSecondary"
+            android:text="@string/custom" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/after_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView29"
+        app:layout_constraintTop_toTopOf="@+id/before_choice"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/after23.975"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_23_975"
+            app:backgroundTint="?attr/colorSecondary"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <Button
+            android:id="@+id/after24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_24"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before23.975"
+            app:layout_constraintStart_toStartOf="@+id/before23.975"
+            app:layout_constraintTop_toBottomOf="@+id/before23.975" />
+
+        <Button
+            android:id="@+id/after25"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_25"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before24"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/before24"
+            app:layout_constraintTop_toBottomOf="@+id/before24" />
+
+        <Button
+            android:id="@+id/after29.975"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_29_975"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/before25"
+            app:layout_constraintTop_toBottomOf="@+id/before25" />
+
+        <Button
+            android:id="@+id/after30"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_30"
+            app:backgroundTint="?attr/colorSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/before29.975"
+            app:layout_constraintStart_toStartOf="@+id/before29.975"
+            app:layout_constraintTop_toBottomOf="@+id/before29.975" />
+
+        <Button
+            android:id="@+id/custom_after"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:backgroundTint="?attr/colorSecondary"
+            android:text="@string/custom" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/chosen_factor"
+        app:layout_constraintEnd_toEndOf="@+id/convert"
+        app:layout_constraintStart_toStartOf="@+id/convert"
+        app:layout_constraintTop_toBottomOf="@+id/convert" />
+
+    <TextView
+        android:id="@+id/factor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+
+        app:layout_constraintEnd_toEndOf="@+id/textView29"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/current_frame_rate"
+        app:layout_constraintBottom_toTopOf="@+id/before_choice"
+        app:layout_constraintEnd_toEndOf="@+id/before_choice"
+        app:layout_constraintStart_toStartOf="@+id/before_choice" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/new_frame_rate"
+        app:layout_constraintBottom_toTopOf="@+id/after_choice"
+        app:layout_constraintEnd_toEndOf="@+id/after_choice"
+        app:layout_constraintStart_toStartOf="@+id/after_choice" />
+
+    <EditText
+        android:id="@+id/custom_before1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/_00"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/before_choice"
+        app:layout_constraintStart_toStartOf="@+id/before_choice"
+        app:layout_constraintTop_toBottomOf="@+id/before_choice"
+        android:importantForAutofill="no" />
+</androidx.constraintlayout.widget.ConstraintLayout>

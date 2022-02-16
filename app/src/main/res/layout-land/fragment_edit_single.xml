@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutCompat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/make_shorter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shorten"
+        app:layout_constraintBottom_toTopOf="@+id/decrease_length_of_sub"
+        app:layout_constraintEnd_toEndOf="@+id/decrease_length_of_sub"
+        app:layout_constraintStart_toStartOf="@+id/decrease_length_of_sub" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lengthen"
+        app:layout_constraintBottom_toTopOf="@+id/increase_length_of_sub"
+        app:layout_constraintEnd_toEndOf="@+id/increase_length_of_sub"
+        app:layout_constraintStart_toStartOf="@+id/increase_length_of_sub" />
+
+    <TextView
+        android:id="@+id/decrease_length_of_sub"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/decrease_length_of_subtitle_line"
+        android:text="@string/_0_1s_left"
+        app:layout_constraintEnd_toStartOf="@+id/shift_subtitle_1s_backwards"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shift_subtitle_1s_backwards" />
+
+    <TextView
+        android:id="@+id/increase_length_of_sub"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/increase_length_of_subtitleline"
+        android:text="@string/_0_1s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shift_subtitle_1s_forward"
+        app:layout_constraintTop_toTopOf="@+id/shift_subtitle_1s_forward" />
+
+    <TextView
+        android:id="@+id/add_underline"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/add_underline_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add_italics"
+        app:layout_constraintTop_toTopOf="@+id/add_italics" />
+
+    <TextView
+        android:id="@+id/reset_styling"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/reset_styling"
+        app:layout_constraintEnd_toStartOf="@+id/edit_text_of_subtitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/delete_subtitle"
+        app:layout_constraintTop_toTopOf="@+id/delete_subtitle" />
+
+    <TextView
+        android:id="@+id/chosen_color"
+        style="?android:attr/buttonStyle"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        android:contentDescription="@string/choose_color"
+        app:layout_constraintBottom_toBottomOf="@+id/add_color"
+        app:layout_constraintEnd_toStartOf="@+id/add_italics"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add_color"
+        app:layout_constraintTop_toTopOf="@+id/add_color" />
+
+    <TextView
+        android:id="@+id/shift_subtitle_01s_backwards"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="@string/_0_1"
+        app:layout_constraintEnd_toStartOf="@+id/shift_subtitle_01s_forwards"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shift_subtitle_1s_backwards"
+        app:layout_constraintTop_toTopOf="@+id/shift_subtitle_1s_backwards" />
+
+    <TextView
+        android:id="@+id/shift_subtitle_01s_forwards"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/_0_1s"
+        app:layout_constraintEnd_toStartOf="@+id/shift_subtitle_1s_forward"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shift_subtitle_01s_backwards"
+        app:layout_constraintTop_toTopOf="@+id/shift_subtitle_1s_backwards" />
+
+    <TextView
+        android:id="@+id/shift_subtitle_1s_forward"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="@string/_1s"
+        app:layout_constraintEnd_toStartOf="@+id/increase_length_of_sub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shift_subtitle_01s_forwards"
+        app:layout_constraintTop_toTopOf="@+id/shift_subtitle_01s_forwards" />
+
+    <TextView
+        android:id="@+id/shift_subtitle_1s_backwards"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+
+
+        android:text="@string/_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shift_subtitle_01s_backwards"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/decrease_length_of_sub"
+        app:layout_constraintTop_toBottomOf="@+id/delete_subtitle" />
+
+    <TextView
+        android:id="@+id/start_time_of_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/time"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/end_time_of_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/time"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <com.subeditor.android_subtitle_editor.TestEditText
+        android:id="@+id/selected_subtitle"
+        style="?attr/buttonStyle"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/delete_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_color"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/delete_subtitle"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toTopOf="@+id/shift_subtitle_1s_backwards"
+        app:layout_constraintEnd_toStartOf="@+id/reset_styling"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add_subtitle_after_this_one"
+        app:layout_constraintTop_toBottomOf="@+id/selected_subtitle" />
+
+    <TextView
+        android:id="@+id/add_subtitle_after_this_one"
+        style="?android:attr/buttonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:minWidth="160dp"
+        android:text="@string/add_new_subtitle_nafter_this_one"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/delete_subtitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reset_styling" />
+
+    <TextView
+        android:id="@+id/edit_text_of_subtitle"
+        style="?android:attr/buttonStyle"
+        android:layout_width="200dp"
+
+        android:layout_height="wrap_content"
+        android:minWidth="270dp"
+        android:text="@string/edit_raw_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reset_styling"
+        app:layout_constraintTop_toTopOf="@+id/delete_subtitle" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_time"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/selected_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selected_subtitle"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selected_subtitle"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/shift_single_line"
+        app:layout_constraintBottom_toTopOf="@+id/shift_subtitle_01s_backwards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/add_color"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/add_color"
+        app:layout_constraintBottom_toTopOf="@+id/selected_subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/chosen_color"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add_boldness"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_boldness"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_boldness"
+        app:layout_constraintEnd_toStartOf="@+id/add_color"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_color" />
+
+    <TextView
+        android:id="@+id/add_italics"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_italics"
+        app:layout_constraintEnd_toStartOf="@+id/add_underline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chosen_color"
+        app:layout_constraintTop_toTopOf="@+id/add_color" />
+
+    <TextView
+        android:id="@+id/chosen_color_single_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="@string/chosen_color"
+        app:layout_constraintBottom_toTopOf="@+id/add_color"
+        app:layout_constraintEnd_toEndOf="@+id/chosen_color"
+        app:layout_constraintStart_toStartOf="@+id/chosen_color" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

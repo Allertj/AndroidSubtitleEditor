@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutCompat2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:gravity="center"
+    tools:context=".FragmentLoadFile">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="303dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/open_file"
+        style="?android:attr/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+
+        android:text="@string/open_subtitle_locally"
+        app:layout_constraintBottom_toTopOf="@+id/network_srt_file"
+        app:layout_constraintEnd_toEndOf="@+id/network_srt_file"
+        app:layout_constraintStart_toStartOf="@+id/network_srt_file" />
+
+    <TextView
+        android:id="@+id/network_srt_file"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:minWidth="270dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/open_subtitle_on_lan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo3"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/restore_session"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:minWidth="270dp"
+        android:text="@string/restore_last_session"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/network_srt_file"
+        app:layout_constraintStart_toStartOf="@+id/network_srt_file"
+        app:layout_constraintTop_toBottomOf="@+id/network_srt_file" />
+
+    <TextView
+        android:id="@+id/logo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:gravity="start"
+        android:letterSpacing="0."
+        android:text="@string/android"
+        android:textAllCaps="true"
+        android:textColor="?android:attr/colorPrimary"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/logo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="start"
+        android:letterSpacing="0."
+        android:text="@string/subtitle"
+        android:textAllCaps="true"
+        android:textColor="?android:attr/colorPrimary"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/logo1"
+        app:layout_constraintTop_toTopOf="@+id/logo1" />
+
+    <TextView
+        android:id="@+id/logo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="start"
+        android:letterSpacing="0."
+        android:text="@string/editor"
+        android:textAllCaps="true"
+        android:textColor="?android:attr/colorPrimary"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/logo2"
+        app:layout_constraintTop_toTopOf="@+id/logo2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

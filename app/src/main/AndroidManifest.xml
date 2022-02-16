@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.subeditor.android_subtitle_editor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/new_icon"
+        android:label="ASE"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/new_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidSubtitleEditor">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--            Works fine-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <data android:mimeType="text/plain" />
+                <data android:scheme="content" />
+                <data android:pathPattern=".*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*.srt" />
+                <data android:pathPattern=".*..*.srt" />
+                <data android:pathPattern=".*.srt" />
+            </intent-filter>
+            <!--           Works Fine-->
+
+            <!--            Works in Android 11 - Samsung, but associates with all file types and does not generate a uri with an absolute path-->
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="*/*" />
+                <data android:host="*"/>
+                <data android:pathPattern=".*..*..*..*..*..*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*..*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*..*.*.srt" />
+                <data android:pathPattern=".*..*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*..*.srt" />
+                <data android:pathPattern=".*..*..*.srt" />
+                <data android:pathPattern=".*..*.srt" />
+                <data android:pathPattern=".*.srt" />
+                <data android:pathPattern="*.srt" />
+                <data android:pathPattern=".srt" />
+                <data android:sspSuffix="*.srt"/>
+                <data android:pathSuffix=".srt"
+                    tools:targetApi="s" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_id_manifest"/>
+<!--            android:value="ca-app-pub-4697727172108481~2511485834"/>-->
+    </application>
+</manifest>

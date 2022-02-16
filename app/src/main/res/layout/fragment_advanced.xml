@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/charset_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/change_charset"
+        style="?android:attr/buttonStyle"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/try_out_a_different_charset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/charset_info" />
+
+    <TextView
+        android:id="@+id/switch_day_night"
+        style="?android:attr/buttonStyle"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/toggle_day_night_theme"
+        app:layout_constraintEnd_toEndOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/change_charset" />
+
+    <TextView
+        android:id="@+id/reset_color_codes"
+        style="?android:attr/buttonStyle"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+
+        android:layout_marginTop="8dp"
+        android:text="@string/remove_all_markup_in_subtitle"
+        app:layout_constraintEnd_toEndOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/create_markup_for_entire_subtitle" />
+
+    <TextView
+        android:id="@+id/create_markup_for_entire_subtitle"
+        style="?android:attr/buttonStyle"
+        android:layout_height="48dp"
+        android:layout_width="340dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/create_markup_for_entire_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_day_night" />
+
+    <TextView
+        android:id="@+id/browse_network"
+        style="?android:attr/buttonStyle"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/browse_network"
+        app:layout_constraintEnd_toEndOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/create_markup_for_entire_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/reset_color_codes" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/shadow_regular"
+        android:backgroundTint="?attr/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_charset">
+
+        <ScrollView
+            android:id="@+id/scroll_result"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/load_into_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/segment_holder">
+                <TextView
+                    android:id="@+id/text_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/load_into_subtitle"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/load_into_subtitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/charset_recycler_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_charset">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/charset_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:iconifiedByDefault="false"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/charset_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?android:attr/colorBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charset_search_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

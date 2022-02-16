@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_toolbar"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentInsetStart="10dp"
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/main_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:background="@drawable/icon_arrow_back"
+            android:clipChildren="false"
+            android:layout_gravity="start"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/main_menu_toolbar_action_background"
+                android:layout_width="48dp"
+                android:contentDescription="@string/main_menu"
+                android:layout_height="48dp"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/help_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/icon_help"
+            android:clipChildren="false"
+            android:layout_gravity="end"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/help_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/help"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/save_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/icon_save"
+            android:clipChildren="false"
+            android:layout_gravity="end"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/save_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/save"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/undo_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/icon_undo"
+            android:clipChildren="false"
+            android:layout_gravity="end"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/undo_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/undo"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/redo_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="end"
+            android:background="@drawable/icon_redo"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/redo_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/redo"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/play_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/icon_play"
+            android:clipChildren="false"
+            android:layout_gravity="end"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/play_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/play_sync_with_video"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/view_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/icon_view"
+            android:clipChildren="false"
+            android:layout_gravity="end"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/view_toolbar_action_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/view_subtitle"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+    </android.widget.Toolbar>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AndroidSubtitleEditor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange_button_text</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="buttonStyle">@style/EditStyle</item>
+        <item name="android:buttonStyle">@style/regularButtonStyle</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorAccent">@color/orange_button_text</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:colorBackground">@color/grey_alternative</item>
+        <item name="colorOnBackground">@color/grey_alternative</item>
+        <item name="fontFamily">@font/proxima_nova_regular</item>
+<!--        <item name="editTextStyle">@style/EditStyle</item>-->
+<!--        <item name="android:editS">@style/EditStyle</item>-->
+<!--        <item name="android:fragmentEnterTransition">@anim/nav_default_enter_anim</item>-->
+<!--        <item name="android:fragmentExitTransition">@anim/nav_default_exit_anim</item>-->
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+</resources>

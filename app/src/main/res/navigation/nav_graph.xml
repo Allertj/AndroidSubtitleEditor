@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMainMenu">
+    <action
+        android:id="@+id/action_reload_edit_single"
+        app:destination="@id/fragmentEditSingle">
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </action>
+    <action
+        android:id="@+id/navigateToLoadAndLoad"
+        app:destination="@id/fragmentLoadFile">
+        <argument
+            android:name="action"
+            app:argType="string"
+            android:defaultValue="externalLoadFromFile" />
+    </action>
+    <fragment
+        android:id="@+id/fragmentLoadFile"
+        android:name="com.subeditor.android_subtitle_editor.FragmentLoadFile"
+        android:label="fragment_load_file"
+        tools:layout="@layout/fragment_load_file" >
+        <argument
+            android:name="action"
+            android:defaultValue="leaveToUser"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragmentLoadFile_to_fragmentSMBExplorer"
+            app:destination="@id/fragmentSMBExplorer"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/fragmentMainMenu" />
+        <action
+            android:id="@+id/action_fragmentLoadFile_to_fragmentMainMenu"
+            app:destination="@id/fragmentMainMenu"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/fragmentMainMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMainMenu"
+        android:name="com.subeditor.android_subtitle_editor.FragmentMainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentSaveSubtitle"
+            app:destination="@id/fragmentSaveSubtitle" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentAdvanced"
+            app:destination="@id/fragmentAdvanced" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentViewSubtitle"
+            app:destination="@id/fragmentViewSubtitle" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentShiftStretch"
+            app:destination="@id/fragmentShiftStretch" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentSyncWithOtherSub"
+            app:destination="@id/fragmentSyncWithOtherSub" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentSelectVideo"
+            app:destination="@id/fragmentSelectVideo" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentSyncByFrameRate"
+            app:destination="@id/fragmentSyncByFrameRate" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentNewPlayer"
+            app:destination="@id/fragmentNewPlayer" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentEdit"
+            app:destination="@id/fragmentEdit" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentLoadFile"
+            app:destination="@id/fragmentLoadFile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentSaveSubtitle"
+        android:name="com.subeditor.android_subtitle_editor.FragmentSaveSubtitle"
+        android:label="fragment_save_subtitle"
+        tools:layout="@layout/fragment_save_subtitle" >
+        <action
+            android:id="@+id/action_fragmentSaveSubtitle_to_fragmentSMBExplorer"
+            app:destination="@id/fragmentSMBExplorer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentViewSubtitle"
+        android:name="com.subeditor.android_subtitle_editor.FragmentViewSubtitle"
+        android:label="fragment_view_subtitle"
+        tools:layout="@layout/fragment_view_subtitle" >
+        <action
+            android:id="@+id/action_fragmentViewSubtitle_to_fragmentMainMenu"
+            app:destination="@id/fragmentMainMenu" />
+        <action
+            android:id="@+id/action_fragmentViewSubtitle_to_fragmentSaveSubtitle"
+            app:destination="@id/fragmentSaveSubtitle" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAdvanced"
+        android:name="com.subeditor.android_subtitle_editor.FragmentAdvanced"
+        android:label="fragment_advanced"
+        tools:layout="@layout/fragment_advanced" >
+        <action
+            android:id="@+id/action_fragmentAdvanced_to_fragmentSMBExplorer"
+            app:destination="@id/fragmentSMBExplorer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentShiftStretch"
+        android:name="com.subeditor.android_subtitle_editor.FragmentShiftStretch"
+        android:label="FragmentShiftStretch" />
+    <fragment
+        android:id="@+id/fragmentSyncWithOtherSub"
+        android:name="com.subeditor.android_subtitle_editor.FragmentSyncWithOtherSub"
+        android:label="FragmentSyncWithOtherSub" >
+        <action
+            android:id="@+id/action_fragmentSyncWithOtherSub_to_fragmentSMBExplorer"
+            app:destination="@id/fragmentSMBExplorer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSelectVideo"
+        android:name="com.subeditor.android_subtitle_editor.FragmentSelectVideo"
+        android:label="FragmentSelectVideo" >
+        <action
+            android:id="@+id/action_fragmentSelectVideo_to_fragmentNewPlayer"
+            app:destination="@id/fragmentNewPlayer" />
+        <action
+            android:id="@+id/action_fragmentSelectVideo_to_fragmentSMBExplorer"
+            app:destination="@id/fragmentSMBExplorer"
+            app:popUpTo="@id/fragmentMainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSyncByFrameRate"
+        android:name="com.subeditor.android_subtitle_editor.FragmentSyncByFrameRate"
+        android:label="FragmentSyncByFrameRate"
+        app:popUpToInclusive="true"
+        app:popUpTo="@id/fragmentMainMenu" />
+    <fragment
+        android:id="@+id/fragmentEdit"
+        android:name="com.subeditor.android_subtitle_editor.FragmentEdit"
+        android:label="FragmentEdit" >
+        <action
+            android:id="@+id/action_fragmentEdit_to_fragmentEditSingle"
+            app:destination="@id/fragmentEditSingle" />
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditSingle"
+        android:name="com.subeditor.android_subtitle_editor.FragmentEditSingle"
+        android:label="FragmentEditSingle" >
+        <argument
+            android:name="index"
+            android:defaultValue="0"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/returnToEdit"
+            app:destination="@id/fragmentEdit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSMBExplorer"
+        android:name="com.subeditor.android_subtitle_editor.FragmentSMBExplorer"
+        android:label="FragmentSMBExplorer"
+        app:popUpToInclusive="false"
+        app:popUpTo="@id/fragmentMainMenu" >
+        <argument
+            android:name="savingLocation"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <argument
+            android:name="listAllFiles"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <argument
+            android:name="extensions"
+            app:argType="string[]"/>
+        <argument
+            android:name="startLocation"
+            android:defaultValue=""
+            app:argType="string"/>
+        <argument
+            android:name="request"
+            android:defaultValue="OpenSelfSub"
+            app:argType="string"/>
+        <argument
+            android:name="showToolbar"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_fragmentSMBExplorer_to_fragmentMainMenu"
+            app:destination="@id/fragmentMainMenu" />
+        <action
+            android:id="@+id/action_fragmentSMBExplorer_to_fragmentLoadFile"
+            app:destination="@id/fragmentLoadFile"/>
+        <action
+            android:id="@+id/action_fragmentSMBExplorer_to_fragmentNewPlayer"
+            app:destination="@id/fragmentNewPlayer" />
+        <action
+            android:id="@+id/action_fragmentSMBExplorer_to_fragmentSyncWithOtherSub"
+            app:destination="@id/fragmentSyncWithOtherSub"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewPlayer"
+        android:name="com.subeditor.android_subtitle_editor.FragmentNewPlayer"
+        android:label="FragmentNewPlayer"
+        app:popUpToInclusive="true"
+        app:popUpTo="@id/fragmentMainMenu" >
+    </fragment>
+</navigation>
